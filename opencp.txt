@@ -1,0 +1,92 @@
+include("https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js")
+include("https://cdn.opencpu.org/opencpu-0.4.js")
+
+ocpu.seturl("http://public.opencpu.org/ocpu/library/stats/R")
+
+
+ var a = [1,2,3,4]
+  var b =[4,7,9,16]
+  
+  var h=""
+  
+  var req = ocpu.call("t.test",{
+    x : a,
+    y:b
+}, function(session){
+
+    //read the session properties (just for fun)
+    //etrieve session console (stdout) async
+     session.getConsole(function(outtxt){
+      h= outtxt ;
+    })
+})
+
+h
+h.length
+  
+h.slice[20]
+
+
+
+ocpu.seturl("http://public.opencpu.org/ocpu/library/metafor/R")
+
+
+var req1 =  ocpu.call("rma.peto",{
+  ai : e ,
+  n1i : ne,
+  ci : c,
+  n2i : nc , 
+  data : study1
+  
+  
+  
+}, function(session){
+
+    //read the session properties (just for fun)
+   
+    //retrieve session console (stdout) async
+     session.getConsole(function(outtxt){
+       g= outtxt ;
+    });
+
+})
+
+g
+
+g.length
+
+g[3]
+
+// working with strings https://www.w3schools.com/js/js_string_methods.asp
+
+
+ocpu.seturl("https://anupamsingh81.ocpu.io/testpackage/R")
+
+
+var k =""
+
+
+var A = 0.3
+var s = 4.3
+
+
+
+
+var req3 =  ocpu.call("retropower",{
+  
+  A : A,
+  s:s
+  
+  
+}, function(session){
+
+    //read the session properties (just for fun)
+   
+    //retrieve session console (stdout) async
+     session.getConsole(function(outtxt){
+       k= outtxt ;
+    });
+
+})
+
+k
